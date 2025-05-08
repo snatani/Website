@@ -2,22 +2,37 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    line-height: 1.6; /* Adjust the value as needed (e.g., 1.5, 1.8, etc.) */
 }
+
 header {
     background: #2c3e50;
     color: white;
     text-align: center;
     padding: 20px;
 }
-nav {
-    text-align: center;
-    padding: 10px;
-    background: #34495e;
+nav ul {
+    display: flex; /* Use flexbox to arrange items horizontally */
+    justify-content: center; /* Center the links horizontally */
+    list-style-type: none; /* Remove default list bullets */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
 }
+
+nav li {
+    margin: 0 10px; /* Add horizontal spacing between links */
+}
+
 nav a {
-    color: white;
-    margin: 10px;
-    text-decoration: none;
+    text-decoration: none; /* Remove underline from links */
+    color: white; /* Keep the text color white */
+    padding: 5px 10px; /* Add some padding for better clickability */
+    border-radius: 5px; /* Optional: Add rounded corners */
+    background-color: #2c3e50; /* Optional: Add a background color */
+}
+
+nav a:hover {
+    background-color: #34495e; /* Optional: Change background on hover */
 }
 section {
     padding: 20px;
@@ -30,4 +45,49 @@ footer {
 }
 html {
     scroll-behavior: smooth;
+}
+.figures {
+    display: flex; /* Use flexbox for layout */
+    gap: 20px; /* Add space between columns */
+    margin-top: 10px; /* Space between text and figures */
+    align-items: contain; /* Ensure all columns have the same height */
+}
+
+.figure-column {
+    display: flex;
+    flex-direction: column; /* Stack images vertically */
+    gap: 2px; /* Add space between images in a column */
+    justify-content: space-between; /* Distribute images evenly */
+    align-items: center; /* Center images horizontally */
+    
+    border: 0px solid #ccc; /* Optional: Add a border for better visibility */
+    padding: 2px; /* Optional: Add padding inside the column */
+    height: 300px; /* Set a fixed height for all columns */
+    box-sizing: border-box; /* Ensure padding is included in the height */
+}
+
+.figures img {
+    width: 100%; /* Scale images to fit the column width */
+    object-fit: contain; /* Maintain aspect ratio */
+    border: 0px solid #ccc; /* Optional: Add a border for better visibility */
+    border-radius: 5px; /* Optional: Add rounded corners */
+}
+
+/* If the column has only one image, make it take the full height */
+.figure-column img:only-child {
+    height: 100%; /* Take the full height of the column */
+}
+
+/* If the column has multiple images, distribute the height evenly */
+.figure-column img:not(:only-child) {
+    max-height: calc(100% / 2 - 2px); /* Scale height for multiple images */
+}
+
+#papers ul {
+    list-style-type: none; /* Removes bullets from the list */
+    padding: 0; /* Removes default padding */
+    margin: 0; /* Removes default margin */
+}
+#papers ul li {
+    margin-bottom: 30px; /* Adds space between each paper */
 }
