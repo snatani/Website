@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,15 +7,15 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Research Projects</h1>
-    </header>
     <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="talks.html">Talks and Posters</a></li>
-            <li><a href="publications.html">Publications</a></li>
-        </ul>
+    <ul>
+        <li class="nav-header"><a href="index.html">Shreyam Natani</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="research.html" class="active">Research</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="talks.html">Talks and Posters</a></li>
+        
+    </ul>
     </nav>
     <main>
         <section id="papers">
@@ -57,6 +57,7 @@
                         </div>
                     </div>
                 </li>
+                <br><br>
                 <li>
                     <a href="papers/paper2.pdf" target="_blank"><h3>Low voltage polarization switching in ferroelectric FinFET based memory devices, using electric field nonlinearities</h3></a>
                     <span> - Published in Journal of Computational Electronics, 2025</span>
@@ -73,8 +74,20 @@
             </ul>
         </section>
     </main>
+    <button id="back-to-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">↑</button>
     <footer>
-        <p>� 2025 Shreyam Natani</p>
+        <p>© 2025 Shreyam Natani</p>
     </footer>
+    <script>
+        const backToTopButton = document.getElementById('back-to-top');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 200) { // Show button after scrolling 200px
+                backToTopButton.style.display = 'block';
+            } else {
+                backToTopButton.style.display = 'none';
+            }
+        });
+    </script>
 </body>
 </html>

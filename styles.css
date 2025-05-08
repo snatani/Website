@@ -35,11 +35,20 @@ p {
 
 header {
     background: #22333B;
-    color: #E0D68A;
+    color: #EFFBFA;
     text-align: center;
-    padding: 20px;
+    padding: 2px;
     background: linear-gradient(90deg, #22333B, #34495e);
 
+}
+header a {
+    text-decoration: none; /* Removes underline */
+    color: inherit; /* Inherits the color from the parent element */
+}
+
+header a:hover {
+    text-decoration: none; /* Ensures no underline on hover */
+    color: #CDD9D8; /* Prevents color change on hover */
 }
 nav {
     position: sticky;
@@ -47,37 +56,51 @@ nav {
     z-index: 1000;
     background: linear-gradient(90deg, #22333B, #34495e);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Vertically align items */
+    padding: 0 20px; /* Add horizontal padding */
 }
-     
+
 nav ul {
-    display: flex; /* Use flexbox to arrange items horizontally */
-    justify-content: center; /* Center the links horizontally */
+    display: flex; /* Arrange items horizontally */
+    align-items: center; /* Vertically align items */
     list-style-type: none; /* Remove default list bullets */
-    padding: 10px; /* Remove default padding */
+    padding: 0; /* Remove default padding */
     margin: 0; /* Remove default margin */
+    flex-grow: 1; /* Allow the list to grow and take available space */
 }
 
 nav li {
     margin: 0 10px; /* Add horizontal spacing between links */
 }
 
+
+
 nav a {
     text-decoration: none; /* Remove underline from links */
-    font-size: 1.5rem; /* Adjust font size */
+    font-size: 1.2rem; /* Adjust font size */
     color: white; /* Keep the text color white */
     padding: 5px 10px; /* Add some padding for better clickability */
     border-radius: 5px; /* Optional: Add rounded corners */
-    
     transition: background-color 0.7s ease; /* Smooth transition for hover effect */
-    
-
 }
-
+.nav-header a {
+    margin-right: auto; /* Push the header to the far left */
+    font-size: 1.8rem; /* Make the header text larger */
+    font-weight: bold; /* Make the header text bold */
+}
 nav a:hover {
     background-color: #34495e; /* Optional: Change background on hover */
-    transform: scale(3); /* Slightly enlarge on hover */
- 
+    color: #DDDDDD; /* Change text color on hover */
 }
+
+nav a.active {
+    background-color: #EFFBFA; /* Highlight color for the active page */
+    color: #22333B; /* Ensure the text is readable */
+    font-weight: bold; /* Optional: Make the text bold */
+    pointer-events: none; /* Disable clicking on the active link */
+}
+
  section {
          background: #FFFFFF;
          border-radius: 10px;
@@ -145,8 +168,25 @@ html {
 }
 .social-icons {
     margin-top: 10px;
-    text-align: left;
+    text-align: center;
 }
+.resume-label a {
+    text-decoration: none; /* Removes underline */
+    color: inherit; /* Ensures it inherits the color from the parent */
+}
+
+.resume-label a:hover {
+    text-decoration: none; /* Ensures no underline on hover */
+    color: inherit; /* Prevents color change on hover */
+}
+.resume-link {
+   font-size: 1.3rem; 
+    color: #B3001B; /* Use a distinct color for the date */
+    
+    font-weight: bold; /* Optional: Make the text bold */
+    text-decoration: none; /* Ensures no underline on hover */
+}
+
 
 .social-icons a {
     margin: 0 10px;
@@ -188,6 +228,7 @@ html {
 .highlight-award {
     font-weight: bold; /* Make the text bold */
     color: #B3001B; /* Use a distinct color (e.g., red) to highlight */
+    font-size: 1.2rem; /* Adjust the font size for emphasis */
 }
 .resume-label {
     font-size: 20px; /* Adjust the font size for "Resume" */
@@ -204,23 +245,24 @@ html {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background: #8E443D;
-    color: #FFFFFF;
+    display: none; /* Hidden by default */
+    background-color: #B3001B;
+    color: white;
     border: none;
     border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    font-size: 1.5rem;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
     cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    display: none; /* Initially hidden */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
 }
 
 #back-to-top:hover {
-    background: #B3001B;
+    background-color: #AF443D;
 }
 .thesis-text {
-color: #8E443D; /* Use a distinct color for the thesis text */
+color: #B3001B; /* Use a distinct color for the thesis text */
 font-style: italic; /* Optional: Make the text italic for emphasis */
 font-weight: bold; /* Optional: Make the text bold */
 }
@@ -252,8 +294,8 @@ font-weight: bold; /* Optional: Make the text bold */
 
 .publication-title {
     font-size: 1rem; 
-    color: #8E443D; /* Use a distinct color for the date */
+    color: #B3001B; /* Use a distinct color for the date */
     font-style: italic; /* Optional: Make the date italic */
-    font-weight: bold;
+    
 }
 
