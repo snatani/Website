@@ -1,4 +1,6 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&display=swap');
 @keyframes fadeIn {
     from {
              opacity: 0;
@@ -9,16 +11,17 @@
 }
 
 body {
-    font-family: 'Roboto', sans-serif; /* Primary font */
+    font-family: 'Barlow', sans-serif; /* Primary font */
     margin: 0;
     padding: 0;
     line-height: 1.6; /* Adjust the value as needed (e.g., 1.5, 1.8, etc.) */
-    background: #EFFBFA;    
+    background: #EFFBFA; /* Fallback solid color */
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.8), rgba(173, 216, 230, 0.8)); /* Gradient background */
     animation: fadeIn 1s ease-in-out;
 }
 
 h1, h2, h3 {
-         font-family: 'Open Sans', sans-serif; /* Secondary font for headings */
+         font-family: 'Barlow', sans-serif; /* Secondary font for headings */
      }
 
 h1 {
@@ -74,15 +77,14 @@ nav li {
     margin: 0 10px; /* Add horizontal spacing between links */
 }
 
-
-
 nav a {
     text-decoration: none; /* Remove underline from links */
     font-size: 1.2rem; /* Adjust font size */
-    color: white; /* Keep the text color white */
+    color: #EFFBFA; /* Keep the text color white */
     padding: 5px 10px; /* Add some padding for better clickability */
     border-radius: 5px; /* Optional: Add rounded corners */
     transition: background-color 0.7s ease; /* Smooth transition for hover effect */
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
 }
 .nav-header a {
     margin-right: auto; /* Push the header to the far left */
@@ -91,7 +93,7 @@ nav a {
 }
 nav a:hover {
     background-color: #34495e; /* Optional: Change background on hover */
-    color: #DDDDDD; /* Change text color on hover */
+    color: #CDD9D8; /* Change text color on hover */
 }
 
 nav a.active {
@@ -102,19 +104,26 @@ nav a.active {
 }
 
  section {
-         background: #FFFFFF;
-         border-radius: 10px;
-         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-         padding: 20px;
-         margin-bottom: 30px;
-     }
+    flex: 1; /* Ensure sections take up space as needed */
+    border-radius: 15px; /* Slightly larger rounded corners for a modern look */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 4px 6px rgba(255, 255, 255, 0.1); /* Modern shadow effect */
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Subtle border for the glass effect */
+    margin-bottom: 30px; /* Spacing between cards */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+section:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3), 0 6px 8px rgba(255, 255, 255, 0.2); /* Enhanced shadow on hover */
+}
 footer {
     text-align: center;
     padding: 10px;
     background: #22333B;
-    color: white;
+    
     background: linear-gradient(90deg, #22333B, #34495e);
-    color: #E0D68A;
+    color: #EFFBFA;
 }
 }
 html {
@@ -298,4 +307,5 @@ font-weight: bold; /* Optional: Make the text bold */
     font-style: italic; /* Optional: Make the date italic */
     
 }
+
 
