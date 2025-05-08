@@ -251,7 +251,7 @@ font-weight: bold; /* Optional: Make the text bold */
 }
 
 .publication-title {
-    font-size: 1rem; /* Slightly smaller font for the date */
+    font-size: 1rem; 
     color: #8E443D; /* Use a distinct color for the date */
     font-style: italic; /* Optional: Make the date italic */
     font-weight: bold;
