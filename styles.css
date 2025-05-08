@@ -1,21 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;600&display=swap');
+@keyframes fadeIn {
+    from {
+             opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif; /* Primary font */
     margin: 0;
     padding: 0;
     line-height: 1.6; /* Adjust the value as needed (e.g., 1.5, 1.8, etc.) */
+    background: #EFFBFA;    
+    animation: fadeIn 1s ease-in-out;
+}
+
+h1, h2, h3 {
+         font-family: 'Open Sans', sans-serif; /* Secondary font for headings */
+     }
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+p {
+    font-size: 1.1rem;
 }
 
 header {
-    background: #2c3e50;
-    color: white;
+    background: #22333B;
+    color: #E0D68A;
     text-align: center;
     padding: 20px;
+    background: linear-gradient(90deg, #22333B, #34495e);
+
 }
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: linear-gradient(90deg, #22333B, #34495e);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+     
 nav ul {
     display: flex; /* Use flexbox to arrange items horizontally */
     justify-content: center; /* Center the links horizontally */
     list-style-type: none; /* Remove default list bullets */
-    padding: 0; /* Remove default padding */
+    padding: 10px; /* Remove default padding */
     margin: 0; /* Remove default margin */
 }
 
@@ -25,23 +63,36 @@ nav li {
 
 nav a {
     text-decoration: none; /* Remove underline from links */
+    font-size: 1.5rem; /* Adjust font size */
     color: white; /* Keep the text color white */
     padding: 5px 10px; /* Add some padding for better clickability */
     border-radius: 5px; /* Optional: Add rounded corners */
-    background-color: #2c3e50; /* Optional: Add a background color */
+    
+    transition: background-color 0.7s ease; /* Smooth transition for hover effect */
+    
+
 }
 
 nav a:hover {
     background-color: #34495e; /* Optional: Change background on hover */
+    transform: scale(3); /* Slightly enlarge on hover */
+ 
 }
-section {
-    padding: 20px;
-}
+ section {
+         background: #FFFFFF;
+         border-radius: 10px;
+         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+         padding: 20px;
+         margin-bottom: 30px;
+     }
 footer {
     text-align: center;
     padding: 10px;
-    background: #2c3e50;
+    background: #22333B;
     color: white;
+    background: linear-gradient(90deg, #22333B, #34495e);
+    color: #E0D68A;
+}
 }
 html {
     scroll-behavior: smooth;
@@ -83,6 +134,7 @@ html {
     max-height: calc(100% / 2 - 2px); /* Scale height for multiple images */
 }
 
+     
 #papers ul {
     list-style-type: none; /* Removes bullets from the list */
     padding: 0; /* Removes default padding */
@@ -91,3 +143,117 @@ html {
 #papers ul li {
     margin-bottom: 30px; /* Adds space between each paper */
 }
+.social-icons {
+    margin-top: 10px;
+    text-align: left;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    color: #22333B; /* Default icon color */
+    font-size: 30px; /* Icon size */
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #34495e; /* Change color on hover */
+}
+.welcome-photo-container {
+    display: flex; /* Use flexbox to position sections side by side */
+    align-items: center; /* Align items vertically */
+    gap: 20px; /* Add space between the welcome section and the photo */
+}
+
+#welcome {
+    flex: 2; /* Make the welcome section take up more space */
+}
+
+#photo {
+    flex: 1; /* Make the photo section take up less space */
+    text-align: center; /* Center the photo horizontally */
+}
+
+.profile-photo {
+    width: 275px; /* Set the width of the photo */
+    height: auto; /* Match the height to the width */
+    border-radius: 50%; /* Make the photo circular */
+    border: 2px solid #22333B; /* Add a border around the photo */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+    object-position: 10% center;
+}
+.profile-photo:hover {
+         transform: scale(1.05);
+         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+     }
+.highlight-award {
+    font-weight: bold; /* Make the text bold */
+    color: #B3001B; /* Use a distinct color (e.g., red) to highlight */
+}
+.resume-label {
+    font-size: 20px; /* Adjust the font size for "Resume" */
+    margin-right: 10px; /* Add spacing to the right */
+    color: #B3001B; /* Use the same color as the header */
+}
+
+.social-label {
+    font-size: 20px; /* Adjust the font size for "Social" */
+    margin-right: 10px; /* Add spacing to the right */
+    color: #B3001B; /* Use the same color as the header */
+}
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #8E443D;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: none; /* Initially hidden */
+}
+
+#back-to-top:hover {
+    background: #B3001B;
+}
+.thesis-text {
+color: #8E443D; /* Use a distinct color for the thesis text */
+font-style: italic; /* Optional: Make the text italic for emphasis */
+font-weight: bold; /* Optional: Make the text bold */
+}
+
+.education-item {
+    margin-bottom: 20px; /* Add spacing between education items */
+}
+
+.degree-container {
+    display: flex; /* Use flexbox to align degree and date side by side */
+    justify-content: start; 
+    align-items: center; /* Vertically align the degree and date */
+    margin-bottom: 5px; /* Add spacing below the degree container */
+    gap : 20px; /* Add right margin for indentation */
+}
+
+.degree-date {
+    font-size: 1rem; /* Slightly smaller font for the date */
+}
+
+#publications ul {
+    list-style-type: none; /* Remove bullets */
+    padding: 0;
+}
+
+#publications li {
+    margin-bottom: 20px; /* Add space between publications */
+}
+
+.publication-title {
+    font-size: 1rem; /* Slightly smaller font for the date */
+    color: #8E443D; /* Use a distinct color for the date */
+    font-style: italic; /* Optional: Make the date italic */
+    font-weight: bold;
+}
+

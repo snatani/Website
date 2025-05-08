@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Research & Resume</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <header>
@@ -13,24 +15,77 @@
     <nav>
         <ul>
             <li><a href="research.html">Research</a></li>
-            <li><a href="resume.html">Resume</a></li>
+            <li><a href="talks.html">Talks and Posters</a></li>
+            <li><a href="publications.html">Publications</a></li>
         </ul>
     </nav>
     <main>
+    <div class="welcome-photo-container">
         <section id="welcome">
             <h2>Welcome!</h2>
             <p>A PhD candidate at UC San Diego advised by <a href="https://nanomaterials.ucsd.edu/"> Prof. Prabhakar Bandaru</a> and <a href="https://kummelgroup.ucsd.edu/">Prof. Andrew Kummel</a>. <br><br> My research interests lie in fabrication and modeling of nanoscale devices based on 2D/1D materials. <br>
+            <div class="social-icons">
+                <span class="resume-label"><strong>Resume</strong></span> <a href="resume.pdf" target="_blank" aria-label="Resume" title="View Resume">
+                    <i class="fas fa-file-alt"></i>
+                </a><br>
+                <span class="social-label"><strong>Social</strong></span> &nbsp;&nbsp; <a href="https://www.linkedin.com/in/shreyamnatani" target="_blank" aria-label="LinkedIn" title="Visit LinkedIn Profile">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="mailto:snatani@ucsd.edu" aria-label="Email" title="Send an Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="https://scholar.google.com/citations?user=TpHBGkwAAAAJ&hl=en" target="_blank" aria-label="Google Scholar" title="View Google Scholar Profile">
+                    <i class="fas fa-graduation-cap"></i>
+                </a>
+                <a href="https://www.imdb.com/name/nm8763200/" target="_blank" aria-label="IMDb" title="View IMDb Profile">
+                    <i class="fab fa-imdb"></i>
+                </a>
+            </div>
+
         </section>
-        <section id="education">
-            <h2>Education</h2>
-
-In the past, I have twice interned at Adobe w/ Kalyan Sunkavalli, Vladimir Kim and at NVIDIA Research w/ Stan Birchfield . I have also worked as a staff researcher at UC San Diego School of Medicine with Fransisco Contijoch and was a visiting researcher in the Bio Robotics Lab with YU Haoyong at National University of Singapore.
-
-I received my M.S. degree in Computer Science from UC San Diego and B.Eng. degree in Electrical and Electronics Engineering from BITS Pilani, where I was advised by Surekha Bhanot.
-
-My research is supported by the Qualcomm Innovation Fellowship 2023.</p>
+        <section id="photo">
+            <div class="photo-container">
+                <img src="profile.png" alt="Shreyam Natani" class="profile-photo">
+            </div>
         </section>
-    </main>
+    </div>
+    <section id="education">
+    <h2>Education</h2>
+    <ul>
+        <li class="education-item">
+            <div class="degree-container">
+                <strong>PhD. in Mechanical Engineering</strong>
+                <span class="degree-date">2020 - Present</span>
+            </div>
+            <em>University of California, San Diego (UCSD)</em> <br>
+            Advised by Prof. Prabhakar Bandaru and Prof. Andrew Kummel <br>
+            <span class="thesis-text">Thesis: Low voltage, top-gated lower dimensional materials based memory and logic devices</span>
+        </li>
+        <li class="education-item">
+            <div class="degree-container">
+                <strong>M.S. in Mechanical Engineering</strong>
+                <span class="degree-date">2018 - 2020</span>
+            </div>
+            <em>University of California, San Diego (UCSD)</em> <br>
+            Advised by Prof. Prabhakar Bandaru <br>
+        </li>
+        <li class="education-item">
+            <div class="degree-container">
+                <strong>B.Tech. in Mechanical Engineering</strong>
+                <span class="degree-date">2014 - 2018</span>
+            </div>
+            <em>Indian Institute of Technology (IIT) Bombay</em> <br>
+            Advised by Prof. Milind Atrey <br>
+            <span class="thesis-text">Thesis: Theoretical and Experimental Analysis of Radial Superconducting Bearing</span>
+        </li>
+    </ul>
+</section>
+
+</main>
+
+     <button id="back-to-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">↑</button>
+     
+
     <footer>
         <p>© 2025 Shreyam Natani</p>
     </footer>
